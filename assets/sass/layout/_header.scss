@@ -1,0 +1,87 @@
+
+.header {
+    background-color: $red;
+    padding: 30px 0;
+
+    @media only screen and (max-width: 880px) {
+        padding: 10px 0;
+    }
+
+    &__logo {
+        flex-basis: 40%;
+
+        @media only screen and (max-width: $container-width) {
+            flex-basis: 35%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            flex-basis: 25%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 880px) {
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.nav {
+    @media only screen and (max-width: 880px) {
+        margin-top: 20px;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 30px;
+
+        @media only screen and (max-width: $container-width) {
+            margin-right: 20px;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            margin: 0;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    }
+
+    &__link {
+        font-family: $roboto_condensed;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 20px;
+        }
+
+        &--active {
+            font-size: 37px;
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                font-size: 30px;
+            }
+        }
+    }
+}

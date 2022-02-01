@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Slab&family=Roboto:wght@400;700;900&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$roboto_condensed: 'Roboto Condensed', sans-serif;
+$roboto_slab: 'Roboto Slab', serif;
+
+body {
+    font-family: $roboto;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+h1,
+h2,
+h3 {
+    color: $white;
+}
+
+h4 {
+    color: $blue;
+}

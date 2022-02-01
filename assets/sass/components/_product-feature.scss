@@ -1,0 +1,38 @@
+.product-feature {
+    &__banner {
+        position: relative;
+        background-image: url('../images/banner_bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding-top: 40px;
+    }
+
+    &__badge {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+
+        @media only screen and (max-width: $container-width) {
+            width: 15%;
+        }
+        
+        @media only screen and (max-width: $mobile-breakpoint) {
+            left: 10px;
+        }
+    }
+
+    &__heading {
+        font-size: 42px;
+        text-align: center;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 24px;
+        }
+    }
+
+    &__content {
+        background-color: $black;
+        padding: 40px 0;
+    }
+}

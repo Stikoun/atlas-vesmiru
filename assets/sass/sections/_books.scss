@@ -1,0 +1,53 @@
+
+.books {
+    padding-top: 35px;
+
+    &__footer {
+        background: linear-gradient(180deg, rgba(248,206,78,1) 0%, rgba(252,228,158,1) 60%, rgba(255,255,255,1) 100%);
+        padding-top: 55px;
+        padding-bottom: calc(90px - 60px);
+        margin-top: 150px;
+    }
+    
+    &__heading {
+        font-size: 70px;
+        color: $black;
+        margin-bottom: calc(70px - 20px);
+        text-align: center;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 40px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap; 
+        padding: 20px 0 60px 0;    
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            padding: 10px;
+        }
+    }
+
+    &__list {
+        @include reset-list();
+        flex-basis: 50%;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            padding: 0 10px;
+        }
+    }
+
+    &__item {
+        font-size: 28px;
+        color: $black;
+        margin-bottom: 10px;
+        word-break: break-word;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 22px;
+        }
+    }
+}

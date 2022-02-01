@@ -1,0 +1,50 @@
+.footer {
+    background-color: $red;
+    padding: 20px 0;
+
+    &__list {
+        @include reset-list();
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:after {
+            content: '|';
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                content: none;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            margin: 5px 0;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    &__container {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 200px;
+        height: auto;
+        margin-top: 30px;
+    }
+}

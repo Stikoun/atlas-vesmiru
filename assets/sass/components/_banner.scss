@@ -1,0 +1,65 @@
+.banner {
+    position: relative;
+    background-image: url('../images/banner_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    text-align: center;
+    min-height: 400px;
+
+    &__heading {
+        font-family: $roboto_condensed;
+        font-size: 60px;
+        margin-bottom: 20px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 40px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+        background-color: $red_dark;
+        font-size: 45px;
+        text-transform: uppercase;
+        padding: 5px 100px;
+
+        @media only screen and (max-width: $container-width) {
+            padding: 5px 50px;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+
+    &--short {
+        padding: 35px 0 5px 0;
+
+        .banner__button {
+            bottom: 25px;
+        }
+    }
+
+    &--long {
+        padding: 35px 0 125px 0;
+
+        .banner__button {
+            bottom: 50px;
+        }
+    }
+
+    &__img {
+        &--absolute {
+            position: absolute;
+            bottom: 50px;
+            left: 60px;
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+    }
+}

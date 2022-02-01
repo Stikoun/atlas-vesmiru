@@ -1,0 +1,39 @@
+.text-list {
+    padding: 50px 0;
+    background-color: #fee74a;
+
+    &__heading,
+    &__subheading,
+    &__content {
+        color: $black;
+    }
+
+    &__heading {
+        font-size: 42px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 22px;
+        }
+    }
+
+    &__subheading,
+    &__content {
+        font-size: 38px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 20px;
+        }
+    }
+
+    &__content {
+        font-weight: 400;
+    }
+
+    &__list {
+        @include reset-list();
+    }
+
+    &__item {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,47 @@
+.info-box {
+    &__link,
+    &__text {
+        font-size: 70px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 40px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &--blue {
+        background-color: $blue;
+    }
+
+    &--red {
+        background-color: $red;
+    }
+
+    &--red-dark {
+        background-color: $red_dark;
+
+    }
+
+    &--gradient {
+        background: linear-gradient(90deg, rgba(248,206,78,1) 0%, rgba(252,228,158,1) 60%, rgba(255,255,255,1) 100%);
+
+        .info-box__link,
+        .info-box__text {
+            color: $black;
+        }
+    }
+
+    &--padding-small {
+        padding: 15px 0;
+    }
+
+    &--padding-large {
+        padding: 40px 0;
+    }
+}

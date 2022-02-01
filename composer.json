@@ -1,0 +1,17 @@
+{
+    "name": "digihive/theme",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "platform": {
+    	"php": "7.4.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "timber/timber": "2.0.0-alpha.4",
+        "hlavacm/wp-tracy": "^2.0"
+    }
+}

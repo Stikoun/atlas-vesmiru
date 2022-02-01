@@ -1,0 +1,14 @@
+<footer class="footer">
+    <div class="container footer__container">
+        <ul class="footer__list">
+            {% for item in navigation.footer.items %}
+            <li class="footer__item {{ item.classes|join(' ') }}">
+                <a href="{{item.link}}" target="{{item.target}}" class="footer__link">{{item.title}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="http://www.hachette.cz/" target="_blank">
+            {{ svg('hachette', {class: 'footer__logo'}) }}
+        </a>
+    </div>
+</footer>

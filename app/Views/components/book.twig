@@ -1,0 +1,8 @@
+<div class="book">
+    <picture>
+        <source srcset="{{ image.url|towebp }}" type="image/webp">
+        <source srcset="{{ image.url|tojpg }}" type="image/jpeg">
+        <img src="{{ image.url|tojpg }}" alt="{{ image.alt }}">
+     </picture>
+    <p class="book__desc">{{description}}</p>
+</div>

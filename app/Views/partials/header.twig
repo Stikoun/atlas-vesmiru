@@ -1,0 +1,24 @@
+<header class="header">
+    <div class="header__container container">
+        <a href="/" class="header__logo">
+            <picture>
+                <source srcset="{{ asset('images/logo.png')|towebp }}" type="image/webp">
+                <source srcset="{{ asset('images/logo.png')|tojpg }}" type="image/jpeg">
+                <img src="{{ asset('images/logo.png')|tojpg }}" alt="Logo atlas vesmíru">
+             </picture>
+        </a>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                {% for item in navigation.primary.items %}
+                <li class="nav__item {{ item.classes|join(' ') }}">
+                    {% if item.current %}
+                    <a href="{{item.link}}" target="{{item.target}}" class="nav__link nav__link--active">{{item.title}}</a>
+                    {% else %}
+                    <a href="{{item.link}}" target="{{item.target}}" class="nav__link">{{item.title}}</a>                    
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

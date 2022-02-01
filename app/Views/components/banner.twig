@@ -1,0 +1,32 @@
+{% if type == "long" %}
+<section class="banner banner--long">
+{% else %}    
+<section class="banner banner--short">
+{% endif %}
+    <div class="container">
+        {% if heading %}
+        <h1 class="banner__heading">{{heading}}</h1>
+        {% endif %}
+
+        <picture>
+            <source srcset="{{ image.url|towebp }}" type="image/webp">
+            <source srcset="{{ image.url|tojpg }}" type="image/jpeg">
+            <img src="{{ image.url|tojpg }}" alt="{{ image.alt }}" class="banner_img">
+         </picture>
+
+        {% if link and link.target %}
+        <a href="{{link.url}}" target="{{link.target}}" class="banner__button">{{link.title}}</a>
+        {% elseif link %}
+        <a href="{{link.url}}" class="banner__button">{{link.title}}</a>       
+        {% endif %}
+        
+
+        {% if type == "long" %}
+        <picture>
+            <source srcset="{{ logo.url|towebp }}" type="image/webp">
+            <source srcset="{{ logo.url|tojpg }}" type="image/jpeg">
+            <img src="{{ logo.url|tojpg }}" alt="{{ logo.alt }}" class="banner__img banner__img--absolute">
+         </picture>
+        {% endif %}
+    </div>
+</section>

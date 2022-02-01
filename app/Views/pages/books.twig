@@ -1,0 +1,74 @@
+{% extends "layouts/app.twig" %}
+
+{% block body %}
+    {% include "components/banner.twig" with {
+        type: acf.banner.format,
+        heading: acf.banner.heading,
+        image: acf.banner.img,
+        logo: acf.banner.logo,
+        link: acf.banner.link
+    } %}
+
+    {% include "components/info-box.twig" with {
+        background: acf.info_box.background,
+        padding: acf.info_box.padding,
+        is_link: acf.info_box.is_link,
+        link: acf.info_box.link,
+        text: acf.info_box.text
+    } %}
+
+    <section class="books">
+        {% include "components/info-box.twig" with {
+            background: acf.info_box_2.background,
+            padding: acf.info_box_2.padding,
+            is_link: acf.info_box_2.is_link,
+            link: acf.info_box_2.link,
+            text: acf.info_box_2.text
+        } %}
+        <div class="books__container container">
+            {% for book in acf.books %}
+                {% if loop.index0 % 4 == 0 and loop.index0 != 0 %}
+                </div> <!-- Close books_container after every 4th item-->
+                    {% include "components/info-box.twig" with {
+                        background: acf.info_box.background,
+                        padding: acf.info_box.padding,
+                        is_link: acf.info_box.is_link,
+                        link: acf.info_box.link,
+                        text: acf.info_box.text
+                    } %}
+                <div class="books__container container"> <!-- Open books_container after info-box render -->
+                {% endif %}
+                {% include "components/book.twig" with {
+                    image: book.image,
+                    description: book.description
+                } %}
+            {% endfor %}
+        </div>
+        <div class="books__footer">
+            <div class="container">
+                <h2 class="books__heading">{{acf.books_footer.heading}}</h2>             
+                <div class="books__container">
+                    <ul class="books__list">
+                        {% for book in acf.books_footer.left_list %}
+                        <li class="books__item">{{book.name}}</li>
+                        {% endfor %}
+                    </ul>
+                    <ul class="books__list">
+                        {% for book in acf.books_footer.right_list %}
+                        <li class="books__item">{{book.name}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "components/info-box.twig" with {
+        background: acf.info_box.background,
+        padding: acf.info_box.padding,
+        is_link: acf.info_box.is_link,
+        link: acf.info_box.link,
+        text: acf.info_box.text
+    } %}
+
+{% endblock %}

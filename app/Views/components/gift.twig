@@ -1,0 +1,11 @@
+<div class="gift">
+    <div class="gift__badge">{{count}}° darek</div>
+    <picture>
+        <source srcset="{{ image.url|towebp }}" type="image/webp">
+        <source srcset="{{ image.url|tojpg }}" type="image/jpeg">
+        <img src="{{ image.url|tojpg }}" alt="{{ image.alt }}" class="gift__image">
+     </picture>
+    <h2 class="gift__name">{{name}}</h2>
+    <p class="gift__attributes">{{description}}</p>
+    <div class="gift__footer">{{footer}}</div>
+</div>

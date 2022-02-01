@@ -1,0 +1,78 @@
+.gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 50%;
+    padding: 0 10px;
+
+            
+    @media only screen and (max-width: $mobile-breakpoint) {
+        padding: 0;
+    }
+
+    &__name,
+    &__attributes {
+        color: $dark_blue;
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        padding: 0 50px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 22px;
+        }
+    }
+
+    &__attributes {
+        font-family: $roboto_slab;
+        font-size: 25px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+        margin: 24px 0;
+    }
+
+    &__badge {
+        max-width: 250px;
+        background-color: $red_dark;
+        font-size: 46px;
+        text-transform: uppercase;
+        text-shadow: 2px 3px 4.35px rgba(0, 0, 0, 1);
+        color: $yellow_light;
+        border-radius: 50%;
+        padding: 20px;
+        border: 2px solid white;
+        box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 1);
+        font-weight: 900; 
+        text-align: center;   
+        
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 26px;
+            width: 50%;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        background-color: $red_dark;
+        font-size: 46px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
+        padding: 15px 0;
+        font-weight: 900;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            font-size: 26px;
+        }
+    }
+}

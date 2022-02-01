@@ -1,0 +1,26 @@
+<section class="product-feature">
+    <div class="product-feature__banner">
+        <div class="container">
+            <picture>
+                <source srcset="{{ image.url|towebp }}" type="image/webp">
+                <source srcset="{{ image.url|tojpg }}" type="image/jpeg">
+                <img src="{{ image.url|tojpg }}" alt="{{ image.alt }}" class="product-feature__img">
+             </picture>
+             <picture>
+                <source srcset="{{ logo.url|towebp }}" type="image/webp">
+                <source srcset="{{ logo.url|tojpg }}" type="image/jpeg">
+                <img src="{{ logo.url|tojpg }}" alt="{{ logo.alt }}" class="product-feature__badge">
+             </picture>
+        </div>
+    </div>
+    <div class="product-feature__content">
+        <div class="container">
+            <h2 class="product-feature__heading">{{list_heading}}</h2>
+            <ul class="product-feature__list list list--center">
+                {% for item in list %}
+                <li class="list__item">{{item.text}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

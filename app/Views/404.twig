@@ -1,0 +1,9 @@
+{% extends "layouts/app.twig" %}
+
+{% block body %}
+    {% include "components/banner.twig" with {
+        type: acf.banner.format,
+        heading: "Stránka nebyla nalezena"
+    } %}
+
+{% endblock %}

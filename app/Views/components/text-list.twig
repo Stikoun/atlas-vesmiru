@@ -1,0 +1,13 @@
+<section class="text-list">
+    <div class="container">
+        <h2 class="text-list__heading">{{heading}}</h2>
+        <ul class="text-list__list">
+            {% for item in list %}
+            <li class="text-list__item">
+                <h3 class="text-list__subheading">{{item.heading}}</h3>
+                <p class="text-list__content">{{item.text}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

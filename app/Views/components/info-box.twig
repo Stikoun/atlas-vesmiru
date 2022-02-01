@@ -1,0 +1,34 @@
+{% if background == "blue" %}
+    {% set background = "info-box--blue" %}
+{% elseif background == "red" %}
+    {% set background = "info-box--red" %}
+{% elseif background == "red-dark" %}
+    {% set background = "info-box--red-dark" %}
+{% elseif background == "gradient" %}
+    {% set background = "info-box--gradient" %}
+{% else %}
+    {% set background = "info-box--red" %}
+{% endif %}
+
+{% if padding == "small" %}
+    {% set padding = "info-box--padding-small" %}
+{% else %}
+    {% set padding = "info-box--padding-large" %}
+{% endif %}
+
+
+<div class="info-box {{background}} {{padding}}">
+    <div class="info-box__container container">
+        {% if is_link and link.target %}
+        <a href="{{link.url}}" target="{{link.target}}" class="info-box__link">
+            {{link.title}}
+        </a>
+        {% elseif is_link %}
+        <a href="{{link.url}}" class="info-box__link">
+            {{link.title}}
+        </a>        
+        {% else %}
+        <span class="info-box__text">{{text}}</span>
+        {% endif %}
+    </div>
+</div>

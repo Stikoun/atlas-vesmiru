@@ -1,0 +1,15 @@
+{% extends "layouts/app.twig" %}
+
+{% block body %}
+
+{% include "components/banner.twig" with {
+    type: acf.banner.format,
+    heading: acf.banner.heading,
+    image: acf.banner.img,
+    logo: acf.banner.logo,
+    link: acf.banner.link
+} %}
+
+<p>{{post.content}}</p>
+
+{% endblock %}

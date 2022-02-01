@@ -1,0 +1,26 @@
+{% extends "layouts/app.twig" %}
+
+{% block body %}
+    {% include "components/banner.twig" with {
+        type: acf.banner.format,
+        heading: acf.banner.heading,
+        image: acf.banner.img,
+        logo: acf.banner.logo,
+        link: acf.banner.link
+    } %}
+
+    <section class="faq">    
+        {% for item in acf.questions %}
+        {% include "components/info-box.twig" with {
+            background: "red-dark",
+            padding: "small",
+            is_link: false,
+            text: item.question
+        } %}
+        <div class="container">
+            <p class="faq__answer">{{item.answer}}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+{% endblock %}

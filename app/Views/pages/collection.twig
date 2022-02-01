@@ -1,0 +1,52 @@
+{% extends "layouts/app.twig" %}
+
+{% block body %}
+
+    {% include "components/banner.twig" with {
+        type: acf.banner.format,
+        heading: acf.banner.heading,
+        image: acf.banner.img,
+        logo: acf.banner.logo,
+        link: acf.banner.link
+    } %}
+
+    {% include "components/info-box.twig" with {
+        background: acf.info_box.background,
+        padding: acf.info_box.padding,
+        is_link: acf.info_box.is_link,
+        link: acf.info_box.link,
+        text: acf.info_box.text
+    } %}
+
+    {% include "components/video.twig" with {
+        video: acf.video
+    } %}
+
+    {% include "components/info-box.twig" with {
+        background: acf.info_box.background,
+        padding: acf.info_box.padding,
+        is_link: acf.info_box.is_link,
+        link: acf.info_box.link,
+        text: acf.info_box.text
+    } %}
+
+    {% include "components/text-list.twig" with {
+        heading: acf.text_box.heading,
+        list: acf.text_box.list
+    } %}
+
+    {% include "components/product-feature.twig" with {
+        image: acf.product_feature.banner.image,
+        logo: acf.product_feature.banner.logo,
+        list_heading: acf.product_feature.list.heading,
+        list: acf.product_feature.list.list_items
+    } %}
+
+    {% include "components/info-box.twig" with {
+        background: acf.info_box.background,
+        padding: acf.info_box.padding,
+        is_link: acf.info_box.is_link,
+        link: acf.info_box.link,
+        text: acf.info_box.text
+    } %}
+{% endblock %}

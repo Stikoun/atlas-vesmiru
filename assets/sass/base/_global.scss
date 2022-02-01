@@ -1,0 +1,26 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: $container-width) {
+    .container {
+        padding: 10px;
+    }
+}
